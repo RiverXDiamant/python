@@ -55,3 +55,77 @@ def sum_positive_numbers(n):
 
 print(sum_positive_numbers(3))  # Should be 6
 print(sum_positive_numbers(5))  # Should be 15
+
+# ? Week 3 Quiz
+
+number = 15  # Initialize the variable
+while number >= 5:  # Complete the while loop condition
+    print(number, end=" ")
+    number -= 5  # Increment the variable
+
+
+# Should print 15 10 5
+
+for number in range(5, -1, -1):
+    print(number)
+
+# Should print:
+# 5
+# 4
+# 3
+# 2
+# 1
+# 0
+
+
+def factorial(n):
+    result = n
+    start = n
+    n -= 1
+    while n > 0:  # The while loop should execute as long as n is greater than 0
+        result *= n  # Multiply the current result by the current value of n
+        n -= 1  # Decrement the appropriate variable by -1
+    return result
+
+
+print(factorial(3))  # Should print 6
+print(factorial(9))  # Should print 362880
+print(factorial(1))  # Should print 1
+
+
+def rows_asterisks(rows):
+    # Complete the outer loop range to control the number of rows
+    rows = 5
+    for x in range(1, 1, 1):
+        # Complete the inner loop range to control the number of
+
+        # asterisks per row
+        for y in range(rows):
+            # Prints one asterisk and one space
+            print("*", end=" ")
+        # An empty print() function inserts a line break at the
+        # end of the row
+        print()
+
+
+rows_asterisks(5)
+# Should print the asterisk rows shown above
+
+
+def countdown(start):
+    x = start
+    if x > 0:
+        return_string = "Counting down to 0: "
+        while x >= 0:  # Complete the while loop
+            return_string += str(x)  # Add the numbers to the "return_string"
+            if x > 0:
+                return_string += ","
+            x -= 1  # Decrement the appropriate variable
+    else:
+        return_string = "Cannot count down to 0"
+    return return_string
+
+
+print(countdown(10))  # Should be "Counting down to 0: 10,9,8,7,6,5,4,3,2,1,0"
+print(countdown(2))  # Should be "Counting down to 0: 2,1,0"
+print(countdown(0))  # Should be "Cannot count down to 0"
