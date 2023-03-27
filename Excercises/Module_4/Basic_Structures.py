@@ -18,3 +18,18 @@ word = "supercalifragilisticexpialadocious"
 print(word.index("x"))
 
 # Output: 21
+
+# pets = "Cats & Dogs"
+
+# "Dragons" in pets
+
+# Formatting Strings
+
+
+def student_grade(name, grade):
+    return "{name} received {grade}% on the exam".format(name=name, grade=grade)
+
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
