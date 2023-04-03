@@ -55,3 +55,62 @@ def mirrored_string(my_string):
 print(mirrored_string("12 Noon"))  # Should be True
 print(mirrored_string("Was it a car or cat I saw"))  # Should be False
 print(mirrored_string("'eve, Madam Eve"))  # Should be True
+
+# ----------------------------------------------------------------------------
+# Skill Group 2
+
+# Use the format() method, with {} placeholders for variable data, to create a new string.
+
+# Use a formatting expression, like {:.2f}, to format a float variable and configure the number of decimal places to display for the float.
+
+# This function converts measurement equivalents. Output is formatted
+# as, "x ounces equals y pounds", with y limited to 2 decimal places.
+
+
+def convert_weight(ounces):
+
+    # Conversion formula: 1 pound = 16 ounces
+    pounds = ounces/16
+
+    # The result is composed using the .format() method. There are two
+    # placeholders in the string: the first is for the "ounces"
+    # variable and the second is for the "pounds" variable. The second
+    # placeholder formats the float result of the conversion
+    # calculation to be limited to 2 decimal places.
+    result = "{} ounces equals {:.2f} pounds".format(ounces, pounds)
+    return result
+
+
+print(convert_weight(12))  # Should be: 12 ounces equals 0.75 pounds
+print(convert_weight(50.5))  # Should be: 50.5 ounces equals 3.16 pounds
+print(convert_weight(16))  # Should be: 16 ounces equals 1.00 pounds
+
+
+# ----------------------------------------------------------------------------
+
+#  Skill Group 3
+
+# Within the format() parameters, select characters at specific index [ ] positions from a variable string.
+
+# Use the format() method, with {} placeholders for variable data, to create a new string.
+
+# This function generates a username using the first 3 letters of a
+# user’s last name plus their birth year.
+def username(last_name, birth_year):
+
+    # The .format() method will use the first 3 letters at index
+    # positions [0,1,2] of the "last_name" variable for the first
+    # {} placeholder. The second {} placeholder concatenates the user’s
+    #  "birth_year" to that string to form a new string username.
+    return ("{}{}".format(last_name[0:3], birth_year))
+
+
+print(username("Ivanov", "1985"))
+# Should display "Iva1985"
+print(username("Rodríguez", "2000"))
+# Should display "Rod2000"
+print(username("Deng", "1991"))
+# Should display "Den1991"
+
+
+# ----------------------------------------------------------------------------
