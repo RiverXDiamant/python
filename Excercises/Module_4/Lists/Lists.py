@@ -80,7 +80,9 @@ print(skip_elements(["a", "b", "c", "d", "e", "f", "g"]))
 # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
 
-# List Comprehensions - Lets us create new lists based on sequences or ranges
+# List Comprehensions -
+# Lets us create new lists based on sequences or ranges
+# Can also use conditional clauses
 
 # multiples = []
 # for x in range(1, 11):
@@ -91,3 +93,14 @@ print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
 
 multiples = [x*7 for x in range(1, 11)]
 print(multiples)
+
+# List Comprehension #2
+# generate a list of the lengths if the strings
+
+languages = ["Python", "Perl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+
+# All numbers divisible by 3 from 0 to 100
+z = [x for x in range(0, 101) if x % 3 == 0]
+print(z)
