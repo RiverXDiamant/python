@@ -64,3 +64,18 @@ print(full_emails([("alex@example.com", "Alex Diego"),
 #! word of caution about some common errors when dealing with lists in Python. Because we use the range function so much with for loops, you might be tempted to use it for iterating over indexes of a list and then to access the elements through indexing. You could be particularly inclined to do this if you're used to other programming languages before. Because in some languages, the only way to access an element of a list is by using indexes. Real talk, this works but looks ugly.
 #
 #! It's more idiomatic in Python to iterate through the elements of the list directly or using enumerate when you need the indexes like we've done so far. There are some specific cases that do require us to iterate over the indexes, for example, when we're trying to modify the elements of the list we're iterating. By the way, if you're iterating through a list and you want to modify it at the same time, you need to be very careful. If you remove elements from the list while iterating, you're likely to end up with an unexpected result. In this case, it might be better to use a copy of the list instead.
+
+
+def skip_elements(elements):
+    # code goes here
+    new_list = []
+    for index, element in enumerate(elements):
+        if index % 2 == 0:
+            new_list.append(element)
+    return new_list
+
+
+# Should be ['a', 'c', 'e', 'g']
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"]))
+# Should be ['Orange', 'Strawberry', 'Peach']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
