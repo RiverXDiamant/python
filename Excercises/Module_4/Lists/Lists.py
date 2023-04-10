@@ -10,10 +10,10 @@ def get_word(sentence, n):
     return ("")
 
 
-print(get_word("This is a lesson about lists", 4))  # Should print: lesson
-print(get_word("This is a lesson about lists", -4))  # Nothing
-print(get_word("Now we are cooking!", 1))  # Should print: Now
-print(get_word("Now we are cooking!", 5))  # Nothing
+# print(get_word("This is a lesson about lists", 4))  # Should print: lesson
+# print(get_word("This is a lesson about lists", -4))  # Nothing
+# print(get_word("Now we are cooking!", 1))  # Should print: Now
+# print(get_word("Now we are cooking!", 5))  # Nothing
 
 
 # ? We use tuples to store information that refers to a specific thing and does not change; i.e. - someones Full Name
@@ -30,6 +30,20 @@ def file_size(file_info):
     return ("{:.2f}".format(size / 1024))
 
 
-print(file_size(('Class Assignment', 'docx', 17875)))  # Should print 17.46
-print(file_size(('Notes', 'txt', 496)))  # Should print 0.48
-print(file_size(('Program', 'py', 1239)))  # Should print 1.21
+# print(file_size(('Class Assignment', 'docx', 17875)))  # Should print 17.46
+# print(file_size(('Notes', 'txt', 496)))  # Should print 0.48
+# print(file_size(('Program', 'py', 1239)))  # Should print 1.21
+
+# Iterating over Lists and Tuples
+
+# Using enumerate function; Get the index of an element while going through a list
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+    print("{} - {}".format(index + 1, person))
+
+# Output - the enumerate function returns a tuple for every element in a list
+
+# 1 - Ashley
+# 2 - Dylan
+# 3 - Reese
