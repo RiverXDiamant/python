@@ -80,9 +80,14 @@ print(skip_elements(["a", "b", "c", "d", "e", "f", "g"]))
 # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
 
-# List Comprehensions
+# List Comprehensions - Lets us create new lists based on sequences or ranges
 
-multiples = []
-for x in range(1, 11):
-    multiples.append(x*7)
+# multiples = []
+# for x in range(1, 11):
+#     multiples.append(x*7)
+# print(multiples)
+
+# More efficient way  using List comprehension
+
+multiples = [x*7 for x in range(1, 11)]
 print(multiples)
