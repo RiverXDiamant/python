@@ -5,3 +5,7 @@
 x = {}
 
 print(type(x))
+
+
+file_counts = {"jpg": 10, "txt": 4, "csv": 2, "py": 23}
+print(file_counts)
