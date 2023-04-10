@@ -24,4 +24,14 @@ print(type(9))
 # print(dir([]))
 
 # When we use the help function on any variable or value, we're showing all the documentation for the corresponding class.
-help("")
+# help("")
+
+
+class Birds:
+    color = ""
+    number = []
+
+
+bluejay = Birds()
+bluejay.count()
+print(bluejay.number)
