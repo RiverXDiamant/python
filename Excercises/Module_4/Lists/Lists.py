@@ -79,3 +79,10 @@ def skip_elements(elements):
 print(skip_elements(["a", "b", "c", "d", "e", "f", "g"]))
 # Should be ['Orange', 'Strawberry', 'Peach']
 print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach']))
+
+# List Comprehensions
+
+multiples = []
+for x in range(1, 11):
+    multiples.append(x*7)
+print(multiples)
