@@ -84,3 +84,25 @@ class Person:
 
 
 help(Person)
+
+# Inheritance
+
+
+class Fruit:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+
+class Pear(Fruit):
+    pass
+
+
+class Grape(Fruit):
+    pass
+
+
+toms = Pear("green", "sweet")
+carnelian = Grape("purple", "sweet")
+print(toms.flavor)
+print(carnelian.color)
