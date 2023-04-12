@@ -40,7 +40,7 @@ def count_letters(text):
 # print(count_letters("tenant"))
 # print(count_letters("a long string with a lot of letters"))
 
-# Iterating Over Dictionaries
+# ========== Iterating Over Dictionaries ==========
 
 # You can iterate over dictionaries using a for loop, just like with strings, lists, and tuples. This will iterate over the sequence of keys in the dictionary. If you want to access the corresponding values associated with the keys, you could use the keys as indexes. Or you can use the items method on the dictionary, like dictionary.items(). This method returns a tuple for each element in the dictionary, where the first element in the tuple is the key and the second is the value.
 
