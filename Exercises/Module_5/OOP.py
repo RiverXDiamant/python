@@ -50,3 +50,37 @@ class Peach:
 georgia = Peach("Peachy", "succulent")
 print(georgia.color)
 print(georgia.flavor)
+
+
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
+
+
+help(Apple)
+
+# Docstrings - have to be indented at the same level on block its documenting
+
+
+def to_seconds(hours, minutes, seconds):
+    """Returns the amount of seconds in the given hours, minutes, and seconds."""
+    return hours*3600+minutes*60+seconds
+
+
+help(to_seconds)
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greeting(self):
+        """Outputs a message with the name of the person."""
+        print("Hello! My name is {name}.".format(name=self.name))
+
+
+help(Person)
