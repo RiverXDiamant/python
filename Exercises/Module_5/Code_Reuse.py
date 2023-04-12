@@ -1,5 +1,7 @@
 # ======================= Composition ==================
 
+
+# Object Composition ============
 class Repository:
     def __inti__(self):
         self.packages = {}
@@ -14,6 +16,7 @@ class Repository:
         return result
 
 
+# Example 1 ===============================
 class Clothing:
     stock = {'name': [], 'material': [], 'amount': []}
 
