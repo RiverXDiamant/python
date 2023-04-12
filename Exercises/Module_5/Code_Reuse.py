@@ -1,7 +1,12 @@
 # ======================= Composition ==================
 
+# imports
+import datetime
+import random
 
 # Object Composition ============
+
+
 class Repository:
     def __inti__(self):
         self.packages = {}
@@ -53,3 +58,17 @@ polo.add_item(polo.name, polo.material, 4)
 sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
 current_stock = polo.Stock_by_Material("Cotton")
 print(current_stock)
+
+
+# ========== Python Modules ==========
+# Modules can be used to organize functions, classes, and other data together in a structured way
+print(random.randint(1, 10))
+print(random.randint(1, 10))
+print(random.randint(1, 10))
+
+now = datetime.datetime.now()
+print(type(now))
+print(now)
+
+print(now.year)
+print(now + datetime.timedelta(days=28))
