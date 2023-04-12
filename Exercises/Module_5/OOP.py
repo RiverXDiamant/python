@@ -32,6 +32,21 @@ class Birds:
     number = []
 
 
-bluejay = Birds()
-bluejay.count()
-print(bluejay.number)
+# bluejay = Birds()
+# bluejay.count()
+# print(bluejay.number)
+
+
+# ========== Classes and Methods ==========
+
+# Constructor
+
+class Peach:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+
+georgia = Peach("Peachy", "succulent")
+print(georgia.color)
+print(georgia.flavor)
