@@ -23,13 +23,16 @@
 #! ========== Research ==========
 # Consider all the tools we have available to help us solve the problem. To find out which users are currently logged into machines, we need to check when they logged in and when they logged out. If a user logged into a machine and then logged out, they're no longer logged into it.
 
-# * Example: sort(): Returns a sorted list and also modifies the original list
+# * sort vs sorted:
+# *   - Sorted returns a new list, while sort returns the same list reorganized.
+
+# * Example: sort()
 
 numbers = [4, 6, 2, 7, 1]
 numbers.sort()
 print(numbers)  # : Output: [1, 2, 4, 6, 7]
 
-# * Example: sorted() : Returns a sorted list without modifying the original list
+# * Example: sorted()
 
 names = ["Carlos", "Ray", "Alex", "Kelly"]
 print(names)  # Output: ['Carlos', 'Ray', 'Alex', 'Kelly']
@@ -45,3 +48,9 @@ print(sorted(names))  # Output: ['Alex', 'Carlos', 'Kelly', 'Ray']
 #       -- Key: lets us use a function as the sorting key
 
 print(sorted(names, key=len))
+
+#! ========== Planning ==========
+
+# * - Our input will be a list of events and we'll sort them by time.
+# * - Each event in that list will include a machine name, a username, and tell us whether the event is a login or a logout.
+# * - We want our script to keep track of users as they log in and out of machines
