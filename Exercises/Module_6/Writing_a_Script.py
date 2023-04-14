@@ -146,6 +146,7 @@ events = [
 # Call code to verify that is does what is should:
 
 users = current_users(events)
-
-# Output: {'webserver.local': {'lane'}, 'myworkstation.local': set(), 'mailserver.local': set()}
 print(users)
+# Output: {'webserver.local': {'lane'}, 'myworkstation.local': set(), 'mailserver.local': set()}
+
+generate_report(users)
