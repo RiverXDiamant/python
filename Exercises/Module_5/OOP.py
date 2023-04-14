@@ -114,7 +114,7 @@ class Clothing:
     def __init__(self, name):
         self.name = name
 
-    def checkmaterial(self):
+    def check_material(self):
         print("This {} is made of {}".format(self.name, self.material))
 
 
@@ -123,4 +123,4 @@ class Shirt(Clothing):
 
 
 polo = Shirt("Polo")
-polo.checkmaterial()
+polo.check_material()
