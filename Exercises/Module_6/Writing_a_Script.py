@@ -147,4 +147,5 @@ events = [
 
 users = current_users(events)
 
+# Output: {'webserver.local': {'lane'}, 'myworkstation.local': set(), 'mailserver.local': set()}
 print(users)
