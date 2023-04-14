@@ -72,3 +72,12 @@ print(sorted(names, key=len))
 # Which means we either add the user if the event is a login or remove the user if it's a logout. Once we're done processing the events, we'll want to print a report of the information we generated. This is a completely separate task. So it should be a separate function. This function will receive the dictionary regenerated and print the report.
 
 #! It's important to have separate functions; to process the data and to print the data to the screen. This is because if we want to modify how the report is printed, we know we only need to change the function in charge of printing. Or, if we find a bug in our processing the data, we only need to change the processing function. It would also allow us to use the same data processing function to generate a different kind of report, like generating a PDF file, for example.
+
+
+#! ========== Writing the Script ==========
+
+# Pseudo code
+#   - Process the events to generate a report.
+#   - Sort the list of events chronologically.
+#   - Store the data in a dictionary of sets, which we'll use to keep track of who's logged in where.
+#   - Have a function that generates the dictionary and a separate one that prints the dictionary.
