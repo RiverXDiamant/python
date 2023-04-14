@@ -54,3 +54,21 @@ print(sorted(names, key=len))
 # * - Our input will be a list of events and we'll sort them by time.
 # * - Each event in that list will include a machine name, a username, and tell us whether the event is a login or a logout.
 # * - We want our script to keep track of users as they log in and out of machines
+
+
+# Best strategy for each event
+
+# - If it's a login we want to add iot to a list of users logged in to that machine
+# - If it's a logged out , we want to remove it from the list of users logged into that machine
+#   -- Use a set to store the current users; adding new users at login time and removing them at logout time
+
+#! How to know which set corresponds to the machine we're looking for:
+#   - Easiest way to store this information is with a dictionary
+# Name of the machine as the (key)
+# Current users of that machine as the (value)
+
+# So for each event we process, we'll first check in the dictionary to see if the machine is already there. We need to check this because it could be the first time we're processing an event for that machine. If it's not there, we'll create a new entry. If it is, we'll update the existing entry with the action corresponding to the event.
+
+# Which means we either add the user if the event is a login or remove the user if it's a logout. Once we're done processing the events, we'll want to print a report of the information we generated. This is a completely separate task. So it should be a separate function. This function will receive the dictionary regenerated and print the report.
+
+#! It's important to have separate functions; to process the data and to print the data to the screen. This is because if we want to modify how the report is printed, we know we only need to change the function in charge of printing. Or, if we find a bug in our processing the data, we only need to change the processing function. It would also allow us to use the same data processing function to generate a different kind of report, like generating a PDF file, for example.
