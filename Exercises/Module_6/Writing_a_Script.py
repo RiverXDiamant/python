@@ -1,6 +1,6 @@
 # ========== Final Project Introduction: Writing a Script From the Ground Up ==========
 
-# Problem Statement
+#! ========== Problem Statement ==========
 
 # * We need to process a list of Event objects using their attributes to generate a report that lists all users currently logged in to the machines.
 
@@ -19,3 +19,29 @@
 # Even types are strings:
 #   Login: Our script will receive a list of event objects and we'll access the events attributes. We'll then use that information to know if a user is currently logged into a machine or not
 #   Logout: We want to generate a report that lists all the machine names and for each machine, lists of the users that are currently logged in. We then want this information printed on the screen
+
+#! ========== Research ==========
+# Consider all the tools we have available to help us solve the problem. To find out which users are currently logged into machines, we need to check when they logged in and when they logged out. If a user logged into a machine and then logged out, they're no longer logged into it.
+
+# * Example: sort(): Returns a sorted list and also modifies the original list
+
+numbers = [4, 6, 2, 7, 1]
+numbers.sort()
+print(numbers)  # : Output: [1, 2, 4, 6, 7]
+
+# * Example: sorted() : Returns a sorted list without modifying the original list
+
+names = ["Carlos", "Ray", "Alex", "Kelly"]
+print(names)  # Output: ['Carlos', 'Ray', 'Alex', 'Kelly']
+print(sorted(names))  # Output: ['Alex', 'Carlos', 'Kelly', 'Ray']
+
+
+# Sort using other parameters.
+
+# * Example: Order elements of a list using the return value of a function
+
+# sort() vs sorted(): both sort alphabetically by default
+#   - Can take a couple of Parameters:
+#       -- Key: lets us use a function as the sorting key
+
+print(sorted(names, key=len))
