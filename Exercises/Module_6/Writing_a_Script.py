@@ -76,8 +76,75 @@ print(sorted(names, key=len))
 
 #! ========== Writing the Script ==========
 
-# Pseudo code
+# Steps
 #   - Process the events to generate a report.
 #   - Sort the list of events chronologically.
 #   - Store the data in a dictionary of sets, which we'll use to keep track of who's logged in where.
 #   - Have a function that generates the dictionary and a separate one that prints the dictionary.
+
+# 1 - Define helper function as parameter to sort the list
+
+def get_event_date(event):
+    """Helper function as a parameter to sort the list"""
+    return event.date
+
+# 2 - Processing function
+
+
+def current_users(events):
+    """Processing function sort events, using sort method"""
+    events.sort(key=get_event_date)
+    # create dictionary where we store the names of users and the machine
+    machines = {}
+    # Iterate through the list of events
+    for event in events:
+        # Check if the machine in this event is in the dictionary;
+        # If it's not add it with an empty set as a value
+        if event.machine not in machines:
+            machines[event.machine] = set()
+    # For the login events, we want to add the user to the list
+    # For the logout events, we want to remove users from the list
+        if event.type == "login":
+            machines[event.machine].add(event.user)
+            # Check if the entry is present in the set before trying to remove it
+        elif event.type == "logout" and event.user in machines[event.machine]:
+            machines[event.machine].remove(event.user)
+    return machines
+
+# 3 - Create New function to generate a report
+
+
+def generate_report(machines):
+    """Generates report on which users are currently logged in a machine"""
+    for machine, users in machines.items():
+        if len(users) > 0:  # prevent list with zero users from being printed
+            user_list = " , ".join(users)
+            print("{}: {}".format(machine, user_list))
+
+# Check to make sure code is working as expected
+
+
+class Event:
+    def __init__(self, event_date, event_type, machine_name, user):
+        self.date = event_date
+        self.type = event_type
+        self.machine = machine_name
+        self.user = user
+
+# Sample Events
+
+
+events = [
+    Event('2020-01-21 12:45:56', 'login', 'myworkstation.local', 'jordan'),
+    Event('2020-01-22 15:53:42', 'logout', 'webserver.local', 'jordan'),
+    Event('2020-01-21 18:53:21', 'login', 'webserver.local', 'lane'),
+    Event('2020-01-22 10:25:34', 'logout', 'myworkstation.local', 'jordan'),
+    Event('2020-01-21 08:20:01', 'login', 'webserver.local', 'jordan'),
+    Event('2020-01-23 11:24:35', 'logout', 'mailserver.local', 'chris'),
+]
+
+# Call code to verify that is does what is should:
+
+users = current_users(events)
+
+print(users)
