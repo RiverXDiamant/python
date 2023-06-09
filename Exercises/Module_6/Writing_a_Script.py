@@ -150,3 +150,4 @@ print(users)
 # Output: {'webserver.local': {'lane'}, 'myworkstation.local': set(), 'mailserver.local': set()}
 
 generate_report(users)
+ 
