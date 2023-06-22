@@ -15,3 +15,8 @@ def check_disk_usage(disk):
 
 
 # Define a function called check_cpu_usage. Check the usage for a whole second. We'll say the machine is healthy, it a cpu_usage is less than 75 percent.
+
+
+def check_cpu_usage():
+    usage = psutil.check_cpu_percent(1)
+    return usage < 75
