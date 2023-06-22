@@ -1,3 +1,5 @@
+import areas
+
 # ========== Final Project Introduction: Writing a Script From the Ground Up ==========
 
 #! ========== Problem Statement ==========
@@ -151,3 +153,5 @@ print(users)
 
 generate_report(users)
  
+
+areas.triangle(3,5)
