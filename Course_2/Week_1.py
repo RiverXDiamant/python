@@ -20,3 +20,10 @@ def check_disk_usage(disk):
 def check_cpu_usage():
     usage = psutil.check_cpu_percent(1)
     return usage < 75
+
+# Function to check if either of the two previous functions returns false
+
+if not check_disk_usage("/") or not check_cpu_usage():
+    print("ERROR!")
+else:
+    print("Everything is OK!")
